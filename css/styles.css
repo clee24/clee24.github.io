@@ -15,15 +15,13 @@
   height: 100%;
 }
 
-
-
 body {
-  background-color: bisque;
+  background-color: black;
 }
 
 @keyframes fadebackground {
-  from {background-color: black;}
-  to {background-color: bisque;}
+  from {background-color: white;}
+  to {background-color: black;}
 }
 
 .fade-in {
@@ -66,19 +64,22 @@ hr {
 }
 
 h1 {
-  text-align:center
+  text-align:center;
+  color: white;
 }
 
 h3 {
-  text-align:center
+  text-align:center;
+  color: white;
 }
 
 p {
   text-align:center;
+  color: white;
 }
 
 .top {
-  text-align:center
+  text-align:center;
 }
 .small_links {     
   margin:0 auto;
@@ -136,7 +137,7 @@ th, td {
 }
 /* unvisited link */
 a:link {
-color: black;
+color: white;
 }
 
 /* visited link */
@@ -151,5 +152,5 @@ color: hotpink;
 
 /* selected link */
 a:active {
-color: white;
+color: blue;
 }
