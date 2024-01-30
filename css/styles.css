@@ -64,6 +64,7 @@
   border-radius: 10px;
   padding: 5px;
 }
+
 .big_links {
   margin:0px auto;
   width: 95%;
@@ -72,7 +73,6 @@
   border: solid 2px;
   border-color: #66686b;
   border-radius: 10px;
-
 }
 
 table {
@@ -381,7 +381,7 @@ input[type="image"] {
 .resume .introduce {
   padding: 30px 0 60px;
   font-family: "Nanum Myeongjo";
-  font-size: 14px;
+  font-size: 15px;
   line-height: 180%;
   color: #a8a8ab;
   text-align: left;
