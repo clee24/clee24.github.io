@@ -60,17 +60,17 @@
   width: 50%;
   text-align:center;
   border: solid 2px;
-  border-color: white;
+  border-color: #66686b;
   border-radius: 10px;
   padding: 5px;
 }
 .big_links {
   margin:0px auto;
-  width: 70%;
+  width: 100%;
   padding: 10px;
   text-align:center;
   border: solid 2px;
-  border-color: white;
+  border-color: #66686b;
   border-radius: 10px;
 
 }
@@ -93,7 +93,7 @@ th, td {
 }
 /* unvisited link */
 a:link {
-  color: white;
+  color: #a8a8ab;
 }
 
 /* visited link */
@@ -208,7 +208,7 @@ input {
   font: 13px/100% Apple SD Gothic Neo, "Apple SD 산돌고딕 Neo", "Roboto", "맑은 고딕",
   "Malgun Gothic", "Apple Gothic", "나눔고딕", "Nanum Gothic", "돋움", Dotum, "Helvetica Neue",
   Helvetica, Arial, sans-serif;
-  color: white;
+  color: #a8a8ab;
   border: 0;
 }
 
@@ -360,7 +360,7 @@ input[type="image"] {
 .resume .profile .picture img {
   width: 100%;
 }
-.resume .profile .name {
+.resume .name {
   padding: 20px 0 4px;
   font-family: "Nanum Myeongjo";
   font-size: 23px;
@@ -369,13 +369,13 @@ input[type="image"] {
   color: #333;
   letter-spacing: 2px;
 }
-.resume .profile .job {
+.resume .job {
   color: #66686b;
   font-size: 16px;
   padding: 25px 0 10px;
 }
-.resume .profile .nation {
-  color: #a8a8ab;
+.resume .nation {
+  color: #66686b;
   font-size: 16px;
 }
 .resume .introduce {
@@ -383,7 +383,7 @@ input[type="image"] {
   font-family: "Nanum Myeongjo";
   font-size: 16px;
   line-height: 180%;
-  color: white;
+  color: #a8a8ab;
   text-align: left;
   letter-spacing: 0.5px;
 }
@@ -403,7 +403,7 @@ input[type="image"] {
   font-weight: 700;
   font-size: 20px;
   padding-bottom: 30px;
-  color: white;
+  color: #a8a8ab;
 }
 .resume section h3 > p {
 }
@@ -422,12 +422,12 @@ input[type="image"] {
   padding-top: 0;
 }
 .resume section > ul > li.new .title > a {
-  color: white;
+  color: #a8a8ab;
 }
 
 .resume section .date {
   display: inline-block;
-  color: white;
+  color: #a8a8ab;
   font-size: 13px;
   line-height: 140%;
   padding: 4px 0 0 8px;
@@ -438,13 +438,13 @@ input[type="image"] {
   font-weight: 700;
   line-height: 140%;
   letter-spacing: 0.5px;
-  color: white;
+  color: #a8a8ab;
 }
 .resume section .title span {
   font-size: 12px;
   line-height: 140%;
   padding-left: 5px;
-  color: white;
+  color: #a8a8ab;
   font-family: initial;
   font-weight: normal;
 }
@@ -462,7 +462,7 @@ input[type="image"] {
   left: 0;
   width: 5px;
   height: 2px;
-  background-color: white;
+  background-color: #a8a8ab;
   -webkit-transition: width 0.45s cubic-bezier(0.86, 0.16, 0.22, 1.21);
   -moz-transition: width 0.45s cubic-bezier(0.86, 0.16, 0.22, 1.21);
   -ms-transition: width 0.45s cubic-bezier(0.86, 0.16, 0.22, 1.21);
@@ -473,7 +473,7 @@ input[type="image"] {
   background-color: #fff;
 }
 .resume section .title > a:hover {
-  color: white;
+  color: #a8a8ab;
 }
 /* .resume section .title > a:hover i {
   width: 100%;
@@ -484,7 +484,7 @@ input[type="image"] {
   font-size: 15px;
   font-weight: 700;
   line-height: 170%;
-  color: white;
+  color: #a8a8ab;
   letter-spacing: 0.5px;
 }
 .resume .experience .title,
@@ -501,10 +501,10 @@ input[type="image"] {
   color: #c1c1c1;
 }
 .resume.black section .title {
-  color: white;
+  color: #a8a8ab;
 }
 .resume.black .skills .list {
-  color: white;
+  color: #a8a8ab;
 }
 
 .resume.black .skills .list
