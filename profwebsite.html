@@ -1,0 +1,368 @@
+<!--  
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Chris Lee</title>
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="icon" href="css/favicon.ico">
+        </head>
+        <body>
+            <div class="top">
+                <h1>I'm Chris.</h1>
+                <p>a programmer.</p>
+            </div>
+            <div class="middle">
+            </div>
+            <div class="bottom">  
+            </div>
+            </body>
+    </html>
+    --> 
+    
+    
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>Chris' Map</title>
+    <link rel="icon" href="css/favicon.ico">
+    <meta property='og:image' content='websitephoto.png'/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 120px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    #menu a:last-child {
+        border: none;
+    }
+
+    #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+    }
+
+    #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+    }
+
+    #menu a.active:hover {
+        background: #3074a4;
+    }
+    </style>
+    <nav id="menu"></nav>
+    </head>
+    <body>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGVlY2hyaXM1MDAwIiwiYSI6ImNqZzZwcWxtYzB1MTkycXJudW1uNzVpbjgifQ.XtQDTCOBj4JdgGfDRACcrg';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/leechris5000/cl3ywg33i002r14mgntc3o7lr',
+    center: [-108.05817741872761,49.31442472708329],
+    zoom: 2.5
+    });
+
+    map.on('load', () => {
+
+      map.addControl(new mapboxgl.FullscreenControl(), 'top-left');
+// Load an image from an external URL.
+map.loadImage(
+'https://docs.mapbox.com/mapbox-gl-js/assets/cat.png',
+(error, image) => {
+if (error) throw error;
+
+// Add the image to the map style.
+map.addImage('cat', image);
+ 
+
+// Add a data source containing one point feature.
+
+
+map.addSource('point', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [-81.93703973990512,40.81398911837351]
+}
+}
+]
+}
+});
+
+map.addSource('pointa', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.48287889370994,37.76739138046162]
+}
+}
+]
+}
+});
+
+map.addSource('pointb', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [-147.35062947665187,64.7505400696603]
+}
+}
+]
+}
+});
+
+
+// Add a layer to use the image to represent the data.
+map.addLayer({
+'id': 'points',
+'type': 'symbol',
+'source': 'pointa', // reference the data source
+'layout': {
+'icon-image': 'cat', // reference the image
+'icon-size': 0.2
+}
+});
+ 
+// Add a layer to use the image to represent the data.
+map.addLayer({
+'id': 'pointss',
+'type': 'symbol',
+'source': 'point', // reference the data source
+'layout': {
+'icon-image': 'cat', // reference the image
+'icon-size': 0.2
+}
+});
+
+map.addLayer({
+'id': 'pointsss',
+'type': 'symbol',
+'source': 'pointb', // reference the data source
+'layout': {
+'icon-image': 'cat', // reference the image
+'icon-size': 0.2
+}
+});
+
+}
+);
+
+
+
+//IGHTTTT
+var toggleableLayerIds = [ 'click at a cat location'];
+
+for (var i = 0; i < toggleableLayerIds.length; i++) {
+    var id = toggleableLayerIds[i];
+
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'active';
+    link.textContent = id;
+
+    link.onclick = function (e) {
+        var clickedLayer = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+        if (visibility === 'visible') {
+            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+        }
+    };
+
+    var layers = document.getElementById('menu');
+    layers.appendChild(link);
+}
+//AIGHT
+
+
+map.on('click', 'points', (e) => {
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+//new mapboxgl.Popup()
+//.setLngLat(coordinates)
+//.setHTML("meow")
+//.addTo(map);
+});
+
+
+map.on('click', 'pointss', (e) => {
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+//new mapboxgl.Popup()
+//.setLngLat(coordinates)
+//.setHTML("meow")
+//.addTo(map);
+});
+});
+
+map.on('click', 'pointsss', (e) => {
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML("<a href='index.html'>Professional Site</a>")
+.addTo(map);
+});
+    
+    // Center the map on the coordinates of any clicked circle from the 'circle' layer.
+    
+    map.on('click', 'pointss', (e) => {
+    map.flyTo({
+    center: e.features[0].geometry.coordinates,
+    zoom: 12.2,
+    });
+    });
+
+    map.on('click', 'points', (e) => {
+    map.flyTo({
+    center: e.features[0].geometry.coordinates,
+    zoom: 12.2,
+    });
+    });
+     
+    map.on('click', (event) => {
+        const features = map.queryRenderedFeatures(event.point, {
+        layers: ['click at a cat location'] // replace with your layer name
+      });
+      if (!features.length) {
+        return;
+      }
+      const feature = features[0];
+      const popup = new mapboxgl.Popup({ offset: [0, -15] })
+      .setLngLat(feature.geometry.coordinates)
+      .setHTML(
+        `<h3>${feature.properties.title}</h3><a href="${feature.properties.description}">click to read</a>`
+      )
+      .addTo(map);
+    });
+    
+    // Change the cursor to a pointer when the it enters a feature in the 'circle' layer.
+    map.on('mouseenter', 'click at a cat location', () => {
+    map.getCanvas().style.cursor = 'pointer';
+    });
+     
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'click at a cat location', () => {
+    map.getCanvas().style.cursor = '';
+    
+    });
+    
+    </script>
+     
+    </body>
+    </html>
+    
+    <!--  
+    <html lang='en'>
+      <head>
+        <meta charset='utf-8' />
+        <title>Points on a map</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+        <style>
+          body { 
+            margin: 0; 
+            padding: 0; 
+          }
+          #map { 
+            position: absolute; 
+            top: 0; 
+            bottom: 0; 
+            width: 100%; 
+          }
+        </style>
+      </head>
+      <body>
+        <div id='map'></div>
+        <script>
+        // The value for 'accessToken' begins with 'pk...'
+        mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN'; 
+        const map = new mapboxgl.Map({
+          container: 'map',
+          // Replace YOUR_STYLE_URL with your style URL.
+          style: 'YOUR_STYLE_URL', 
+          center: [-87.661557, 41.893748],
+          zoom: 10.7
+        });
+    
+        // Code from the next step will go here.
+    
+        </script>
+      </body>
+    </html>
+    -->
