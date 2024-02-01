@@ -98,20 +98,19 @@ a:link {
 
 /* visited link */
 a:visited {
-  color:pink;
+  color:grey;
 }
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: lightgrey;
 }
 
 /* selected link */
 a:active {
-  color: blue;
+  color: #a8a8ab;
 }
 
-/*fromchamwoo */
 @charset "UTF-8";
 @-webkit-keyframes appearInfoWindow {
   0% {
@@ -453,7 +452,7 @@ input[type="image"] {
   position: relative;
   color: inherit;
   padding-left: 7px;
-  font-size: 17px;
+  font-size: 15px;
 }
 .resume section .title > a i {
   display: inline-block;
