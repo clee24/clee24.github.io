@@ -55,6 +55,19 @@
 .top {
   text-align:center;
 }
+
+.projects-container {
+  text-align: center;
+  padding: 100px 60;
+}
+
+.projects-text {
+  font-family: "Nanum Myeongjo";
+  color: #a8a8ab;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
 .small_links {
   margin:0 auto;
   width: 65%;
@@ -91,99 +104,23 @@ th, td {
   list-style-type:none;
   text-align:center;
 }
-/* unvisited link */
+
 a:link {
   color: #a8a8ab;
 }
 
-/* visited link */
 a:visited {
   color:grey;
 }
 
-/* mouse over link */
 a:hover {
   color: lightgrey;
 }
 
-/* selected link */
 a:active {
   color: #a8a8ab;
 }
 
-@charset "UTF-8";
-@-webkit-keyframes appearInfoWindow {
-  0% {
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@-moz-keyframes appearInfoWindow {
-  0% {
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@-o-keyframes appearInfoWindow {
-  0% {
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes appearInfoWindow {
-  0% {
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -271,7 +208,6 @@ img {
   vertical-align: top;
 }
 
-/* 이미지에 공간을 없애기 위해 vertical-align:top 사용 */
 address,
 caption,
 cite,
@@ -317,10 +253,10 @@ input[type="image"] {
   vertical-align: top;
 }
 
-/* resume */
 .resume {
   position: relative;
 }
+
 .resume .paper {
   position: relative;
   max-width: 860px;
@@ -332,15 +268,18 @@ input[type="image"] {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 768px) {
   .resume .paper {
     padding: 70px 20px;
   }
 }
+
 .resume .profile {
   position: relative;
   text-align: center;
 }
+
 .resume .profile .picture {
   display: inline-block;
   width: 100px;
@@ -356,9 +295,11 @@ input[type="image"] {
   -ms-border-radius: 150px;
   border-radius: 150px;
 }
+
 .resume .profile .picture img {
   width: 100%;
 }
+
 .resume .name {
   padding: 20px 0 4px;
   font-family: "Nanum Myeongjo";
@@ -368,17 +309,20 @@ input[type="image"] {
   color: #333;
   letter-spacing: 2px;
 }
+
 .resume .job {
   color: #66686b;
   font-size: 16px;
   padding: 25px 0 10px;
 }
+
 .resume .nation {
   color: #66686b;
   font-size: 16px;
 }
+
 .resume .introduce {
-  padding: 30px 0 60px;
+  padding: 30px 0 10px;
   font-family: "Nanum Myeongjo";
   font-size: 15px;
   line-height: 180%;
@@ -386,16 +330,19 @@ input[type="image"] {
   text-align: left;
   letter-spacing: 0.5px;
 }
+
 @media screen and (max-width: 768px) {
   .resume .introduce {
     /*padding:70px 0 60px;*/
     /* font-size: 14px; */
   }
 }
+
 .resume section {
   position: relative;
   padding-bottom: 60px;
 }
+
 .resume section h3 {
   display: flex;
   align-items: center;
@@ -404,22 +351,25 @@ input[type="image"] {
   padding-bottom: 30px;
   color: #a8a8ab;
 }
-.resume section h3 > p {
-}
+
 .resume section h3 > span {
   padding-left: 3px;
   font-weight: 700;
   font-size: 15px;
 }
+
 .resume section > ul {
   margin-left: 15px;
 }
+
 .resume section > ul > li {
   padding-top: 18px;
 }
+
 .resume section > ul > li:first-child {
   padding-top: 0;
 }
+
 .resume section > ul > li.new .title > a {
   color: #a8a8ab;
 }
@@ -431,6 +381,7 @@ input[type="image"] {
   line-height: 140%;
   padding: 4px 0 0 8px;
 }
+
 .resume section .title {
   font-family: "Nanum Myeongjo";
   font-size: 15px;
@@ -439,6 +390,7 @@ input[type="image"] {
   letter-spacing: 0.5px;
   color: #a8a8ab;
 }
+
 .resume section .title span {
   font-size: 12px;
   line-height: 140%;
@@ -447,6 +399,7 @@ input[type="image"] {
   font-family: initial;
   font-weight: normal;
 }
+
 .resume section .title > a {
   display: inline-block;
   position: relative;
@@ -454,6 +407,7 @@ input[type="image"] {
   padding-left: 7px;
   font-size: 15px;
 }
+
 .resume section .title > a i {
   display: inline-block;
   position: absolute;
@@ -468,15 +422,15 @@ input[type="image"] {
   -o-transition: width 0.45s cubic-bezier(0.86, 0.16, 0.22, 1.21);
   transition: width 0.45s cubic-bezier(0.86, 0.16, 0.22, 1.21);
 }
+
 .resume section .title > a i.none {
   background-color: #fff;
 }
+
 .resume section .title > a:hover {
   color: #a8a8ab;
 }
-/* .resume section .title > a:hover i {
-  width: 100%;
-} */
+
 .resume .skills .list {
   padding-left: 7px;
   font-family: "Nanum Myeongjo";
@@ -486,36 +440,38 @@ input[type="image"] {
   color: #a8a8ab;
   letter-spacing: 0.5px;
 }
+
 .resume .experience .title,
 .resume .education .title {
   padding-left: 7px;
 }
+
 .resume.black {
   background-color: #333;
 }
+
 .resume.black .profile .name {
   color: #aaa;
 }
+
 .resume.black .introduce {
   color: #c1c1c1;
 }
+
 .resume.black section .title {
   color: #a8a8ab;
 }
+
 .resume.black .skills .list {
   color: #a8a8ab;
 }
 
-.resume.black .skills .list
-
 @media only screen and (min-width: 768px) {
   /* 320px 이상 */
 }
-/* iPads (portrait and landscape) ----------- */
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
   /* iPhone4+ 레티나 디스플레이 */
 }
-
-/*# sourceMappingURL=resume.css.map */
