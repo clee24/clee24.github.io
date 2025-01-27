@@ -1,5 +1,8 @@
-const ProjectCard = ({ title, date, tech, link }) => (
-    <div className="project-card" onClick={() => window.open(link, '_blank')}>
+const ProjectCard = ({ title, date, tech, link, isActive }) => (
+    <div 
+        className={`project-card ${isActive ? 'active' : ''}`} 
+        onClick={() => isActive && window.open(link, '_blank')}
+    >
         <h3>{title}</h3>
         <p className="date">{date}</p>
         <p className="tech">{tech}</p>
@@ -76,13 +79,13 @@ const App = () => {
             title: "Junior IS",
             date: "2023. 05",
             tech: "Economics Research",
-            link: "Chris Lee Junior IS.pdf"
+            link: "https://docs.google.com/document/d/1PodDbJsuYigydCP3AsLvAJZBHCrhNCLZeSjksJ4sYCU/edit?usp=sharing"
         },
         {
             title: "Portfolio",
             date: "2024. 01",
             tech: "React, HTML/CSS",
-            link: "https://clee24.github.io"
+            link: "https://github.com/clee24/clee24.github.io"
         },
         {
             title: "Burger Time",
@@ -133,7 +136,7 @@ const App = () => {
             <div className="content" style={{ opacity: showContent ? 1 : 0 }}>
                 <div className="projects-grid">
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} {...project} />
+                        <ProjectCard key={index} {...project} isActive={showContent} />
                     ))}
                 </div>
             </div>
