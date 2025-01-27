@@ -58,14 +58,32 @@
 
 .projects-container {
   text-align: center;
-  padding: 100px 60;
+  padding: 30px 25;
 }
 
 .projects-text {
   font-family: "Nanum Myeongjo";
   color: #a8a8ab;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 0.5px;
+  text-decoration: none; 
+}
+
+.projects-box {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: rgba(168, 168, 171, 0.2); 
+  padding: 20px 20px; 
+  border: 1px solid transparent; 
+}
+
+.projects-box:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.projects-box:active {
+  background-color: #333;  /* Darken the background further on click */
 }
 
 .small_links {
@@ -322,7 +340,7 @@ input[type="image"] {
 }
 
 .resume .introduce {
-  padding: 30px 0 10px;
+  padding: 30px 0 60px;
   font-family: "Nanum Myeongjo";
   font-size: 15px;
   line-height: 180%;
