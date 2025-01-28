@@ -101,7 +101,7 @@ body {
 
 .content {
     position: fixed;
-    top: 460px;
+    top: 475px;
     left: 0;
     width: 100vw;
     height: 500px;
@@ -209,9 +209,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .content {
-        top: 440px;
-
     .header {
         padding: 0 20px;
         grid-template-columns: 100px 1fr 100px;
@@ -228,7 +225,7 @@ body {
     }
 
     .project-card {
-        padding: 50% 8px 0 8px;
+        padding: 25% 8px 0 8px;
     }
     
     .project-card h3 {
