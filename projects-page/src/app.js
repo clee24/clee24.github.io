@@ -70,7 +70,7 @@ const App = () => {
             link: "https://github.com/clee24/Ahoj"
         },
         {
-            title: "Volleyball Analysis",
+            title: "Volleyball Computer Vision",
             date: "2024. 04",
             tech: "Python, ML",
             link: "https://wp.nyu.edu/volleyball_serve_classification/"
