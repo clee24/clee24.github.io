@@ -24,13 +24,18 @@ const App = () => {
         audioRef.current.volume = 0.5;
         audioRef.current.muted = true;
 
-        // Start showing content when loop starts
+        // Start showing content 3 seconds into the initial video
         if (initialVideoRef.current) {
+            initialVideoRef.current.ontimeupdate = () => {
+                if (initialVideoRef.current.currentTime >= 2 && !showContent) {
+                    setShowContent(true);
+                }
+            };
+            
             initialVideoRef.current.onended = () => {
                 setInitialVideoEnded(true);
                 if (loopVideoRef.current) {
                     loopVideoRef.current.play();
-                    setShowContent(true);
                 }
             };
         }
