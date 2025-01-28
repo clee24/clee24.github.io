@@ -209,6 +209,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .content {
+        top: 420px;
+    }
+
     .header {
         padding: 0 20px;
         grid-template-columns: 100px 1fr 100px;
