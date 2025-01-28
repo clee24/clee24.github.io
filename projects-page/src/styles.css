@@ -224,18 +224,8 @@ body {
         width: 80px;
     }
 
-    .content {
-        height: 875px;
-        top: 200px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
     .project-card {
-        padding: 25px 8px 0 8px;
+        padding: 25% 8px 0 8px;
     }
     
     .project-card h3 {
