@@ -82,16 +82,16 @@ const App = () => {
             link: "https://github.com/clee24/Ahoj"
         },
         {
-            title: "Volleyball Computer Vision",
-            date: "2024. 04",
-            tech: "Python, AlphaPose",
-            link: "https://wp.nyu.edu/volleyball_serve_classification/"
-        },
-        {
             title: "Junior IS",
             date: "2023. 05",
             tech: "Economics Research",
             link: "https://docs.google.com/document/d/1PodDbJsuYigydCP3AsLvAJZBHCrhNCLZeSjksJ4sYCU/edit?usp=sharing"
+        },
+        {
+            title: "Volleyball Computer Vision",
+            date: "2024. 04",
+            tech: "Python, AlphaPose",
+            link: "https://wp.nyu.edu/volleyball_serve_classification/"
         },
         {
             title: "Portfolio",
