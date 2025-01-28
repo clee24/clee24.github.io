@@ -1,7 +1,14 @@
 const ProjectCard = ({ title, date, tech, link, isActive }) => (
     <div 
         className={`project-card ${isActive ? 'active' : ''}`} 
-        onClick={() => isActive && window.open(link, '_blank')}
+        onClick={() => {
+            if (!isActive) return;
+            if (link.startsWith('http')) {
+                window.open(link, '_blank', 'noopener,noreferrer');
+            } else {
+                window.location.href = link;
+            }
+        }}
     >
         <h3>{title}</h3>
         <p className="date">{date}</p>
