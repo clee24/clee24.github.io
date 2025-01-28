@@ -67,7 +67,7 @@ const App = () => {
             title: "Ahoj!",
             date: "2024. 04",
             tech: "Flutter",
-            link: "https://clee24.github.io/ahoj/"
+            link: "https://github.com/clee24/Ahoj"
         },
         {
             title: "Volleyball Analysis",
