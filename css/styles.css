@@ -63,7 +63,7 @@
 
 .projects-text {
   font-family: "Nanum Myeongjo";
-  color: #919195;
+  color: #66686b;
   font-size: 24px;
   letter-spacing: 0.5px;
   text-decoration: none; 
@@ -72,7 +72,7 @@
 .projects-box {
   display: inline-block;
   border-radius: 10px;
-  background-color: rgba(168, 168, 171, 0.2); 
+  background-color: #222; 
   padding: 20px 20px; 
   border: 1px solid transparent; 
 }
@@ -324,7 +324,7 @@ input[type="image"] {
   font-size: 23px;
   font-weight: 700;
   line-height: 140%;
-  color: #333;
+  color: #3C3C3C;
   letter-spacing: 2px;
 }
 
