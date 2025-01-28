@@ -84,7 +84,7 @@ const App = () => {
         {
             title: "Volleyball Computer Vision",
             date: "2024. 04",
-            tech: "Python, ML",
+            tech: "Python, AlphaPose",
             link: "https://wp.nyu.edu/volleyball_serve_classification/"
         },
         {
